@@ -7,6 +7,8 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Credit")
 public class Credit {
     @Id
-    private String id;
+    private String id= UUID.randomUUID().toString();
     private String holder;
     private double maxCred;
     private double currentAmount;
