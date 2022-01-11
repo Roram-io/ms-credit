@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 
 public class CreditController {
 
-    Logger log = LoggerFactory.getLogger(Credit.class);
+    Logger log = LoggerFactory.getLogger(CreditController.class);
 
     @Autowired
     CreditService creditService;
