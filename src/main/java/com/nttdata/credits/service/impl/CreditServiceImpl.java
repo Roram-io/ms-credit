@@ -51,6 +51,6 @@ public class CreditServiceImpl implements CreditService {
     @Override
     public Mono<Credit> updateCredit(Credit credit) {
         log.info("Calling Repository for method Update "+ credit.getId());
-        return creditRepository.saveCredit(credit);
+        return creditRepository.save(credit);
     }
 }
