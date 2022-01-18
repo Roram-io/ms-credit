@@ -32,7 +32,7 @@ public class CreditController {
     }
 
     @GetMapping("/holder/{id}")
-    public Mono<Credit> getCreditByHolder(@PathVariable("id") String id){
+    public Flux<Credit> getCreditByHolder(@PathVariable("id") String id){
         log.info("Searching BankAccount with holder with Id "+id);
         return creditService.listByHolder(id);
     }

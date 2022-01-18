@@ -25,7 +25,7 @@ public class CreditServiceImpl implements CreditService {
     }
 
     @Override
-    public Mono<Credit> listByHolder(String id){
+    public Flux<Credit> listByHolder(String id){
         log.info("Calling repository for Find by Holder "+id);
         return creditRepository.findCreditByHolder(id);
     }

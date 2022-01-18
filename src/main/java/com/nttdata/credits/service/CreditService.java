@@ -9,7 +9,7 @@ public interface CreditService {
 
     Mono<Credit> listById(String id);
 
-    Mono<Credit> listByHolder(String id);
+    Flux<Credit> listByHolder(String id);
 
     Mono<Void> removeCredit(String id);
 
